@@ -10,9 +10,10 @@ public class Main {
 
         TelegramBotsApi botsApi = new TelegramBotsApi(); // TODO Instantiate Telegram Bots API
 
+        BusinkaBot businkaBot;
         // TODO Register our bot
         try {
-            botsApi.registerBot(new BusinkaBot());
+            botsApi.registerBot(businkaBot = new BusinkaBot());
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }

@@ -24,8 +24,9 @@ public class OffersSelections {
     }
 
     private String getReceivedCommand(String message){
+       BusinkaBot businkaBot = new BusinkaBot();
        String finalMessage = "WooPs...";
-        if(message.contains("/lowcr")){
+        if(businkaBot.msgType == 1){
             receivedCommand = commands[0];
             finalMessage = "Выборка офферов с низким CR:";
         }
